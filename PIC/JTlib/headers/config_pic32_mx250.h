@@ -5,6 +5,8 @@
  * Created on April 12, 2015, 6:28 PM
  */
 
+#include <xc.h>
+
 // John's config file for the PIC32 MX250
 
 #ifndef CONFIG_PIC32_H
@@ -15,7 +17,7 @@
 // DEVCFG0
 #pragma config DEBUG = OFF // no debugging
 #pragma config JTAGEN = OFF // no jtag
-#pragma config ICESEL = ICS_PGx3 // use PGED3 and PGEC3
+#pragma config ICESEL = ICS_PGx2 // use PGED3 and PGEC3
 #pragma config PWP = OFF // no write protect
 #pragma config BWP = OFF // not boot write protect
 #pragma config CP = OFF // no code protect
