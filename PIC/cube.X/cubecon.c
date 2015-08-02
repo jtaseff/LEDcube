@@ -48,7 +48,9 @@ void __ISR(_TIMER_5_VECTOR, IPL5SOFT) Timer5_ISR(void) {
     if (conData.enable) {
 
         // (can still be enabled until we're ready to latch data)
-
+        OE2 = 1;            // disable sources then sinks
+        OE1 = 1;
+        
         // send new layer source data
         SPI2BUF = (unsigned char) (0b1 << layersLUT[conData.layer_stat]);
 
@@ -58,8 +60,7 @@ void __ISR(_TIMER_5_VECTOR, IPL5SOFT) Timer5_ISR(void) {
             while (SPI1STATbits.SPITBF) ;
         }
         // latch and enable
-        OE2 = 1;            // disable sources then sinks
-        OE1 = 1;
+
         LE = 1;             // latch data
         LE = 0;
         OE2 = 0;            // enable sinks then sources

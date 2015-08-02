@@ -14,6 +14,7 @@
       </logicalFolder>
       <itemPath>cubecon.h</itemPath>
       <itemPath>cubeper.h</itemPath>
+      <itemPath>../JTlib/headers/graphics_test_data.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -28,9 +29,20 @@
         <itemPath>../JTlib/source/oled_graphics.c</itemPath>
         <itemPath>../JTlib/source/accel_spi.c</itemPath>
       </logicalFolder>
+      <logicalFolder name="f2" displayName="usb" projectFiles="true">
+        <itemPath>usb/include/usb.h</itemPath>
+        <itemPath>usb/include/usb_cdc.h</itemPath>
+        <itemPath>usb/include/usb_ch9.h</itemPath>
+        <itemPath>usb/src/usb.c</itemPath>
+        <itemPath>usb/src/usb_cdc.c</itemPath>
+        <itemPath>usb/src/usb_hal.h</itemPath>
+      </logicalFolder>
       <itemPath>cubecon.c</itemPath>
       <itemPath>cubeper.c</itemPath>
       <itemPath>cubemain.c</itemPath>
+      <itemPath>usb/include/usb_config.h</itemPath>
+      <itemPath>usb/include/usb_descriptors.c</itemPath>
+      <itemPath>scratchpad.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -41,6 +53,10 @@
   <sourceRootList>
     <Elem>../JTlib/headers</Elem>
     <Elem>../JTlib/source</Elem>
+    <Elem>../dp_usb/headers</Elem>
+    <Elem>../dp_usb/source</Elem>
+    <Elem>usb/include</Elem>
+    <Elem>usb/src</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -103,6 +119,24 @@
       <C32-AR>
         <property key="additional-options-chop-files" value="false"/>
       </C32-AR>
+      <C32-AS>
+        <property key="assembler-symbols" value=""/>
+        <property key="enable-symbols" value="true"/>
+        <property key="exclude-floating-point-library" value="false"/>
+        <property key="expand-macros" value="false"/>
+        <property key="extra-include-directories-for-assembler" value=""/>
+        <property key="extra-include-directories-for-preprocessor" value=""/>
+        <property key="false-conditionals" value="false"/>
+        <property key="keep-locals" value="false"/>
+        <property key="list-assembly" value="false"/>
+        <property key="list-source" value="false"/>
+        <property key="list-symbols" value="false"/>
+        <property key="oXC32asm-list-to-file" value="false"/>
+        <property key="omit-debug-dirs" value="false"/>
+        <property key="omit-forms" value="false"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="warning-level" value=""/>
+      </C32-AS>
       <C32-LD>
         <property key="additional-options-use-response-files" value="false"/>
         <property key="enable-check-sections" value="false"/>
@@ -162,7 +196,7 @@
       </C32CPP>
       <C32Global>
         <property key="common-include-directories"
-                  value="..\JTlib\headers;..\JTlib\source"/>
+                  value="..\JTlib\headers;..\JTlib\source;usb\include"/>
         <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="relaxed-math" value="false"/>
@@ -241,6 +275,8 @@
         <property key="programoptions.uselvpprogramming" value="false"/>
         <property key="voltagevalue" value="3.25"/>
       </PICkit3PlatformTool>
+      <item path="scratchpad.c" ex="true" overriding="false">
+      </item>
     </conf>
   </confs>
 </configurationDescriptor>

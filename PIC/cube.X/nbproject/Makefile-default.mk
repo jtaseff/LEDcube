@@ -45,17 +45,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../JTlib/source/i2c_master.c ../JTlib/source/oled_control_i2c.c ../JTlib/source/oled_graphics.c ../JTlib/source/accel_spi.c cubecon.c cubeper.c cubemain.c
+SOURCEFILES_QUOTED_IF_SPACED=../JTlib/source/i2c_master.c ../JTlib/source/oled_control_i2c.c ../JTlib/source/oled_graphics.c ../JTlib/source/accel_spi.c usb/src/usb.c usb/src/usb_cdc.c cubecon.c cubeper.c cubemain.c usb/include/usb_descriptors.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1110462562/i2c_master.o ${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o ${OBJECTDIR}/_ext/1110462562/oled_graphics.o ${OBJECTDIR}/_ext/1110462562/accel_spi.o ${OBJECTDIR}/cubecon.o ${OBJECTDIR}/cubeper.o ${OBJECTDIR}/cubemain.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1110462562/i2c_master.o.d ${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o.d ${OBJECTDIR}/_ext/1110462562/oled_graphics.o.d ${OBJECTDIR}/_ext/1110462562/accel_spi.o.d ${OBJECTDIR}/cubecon.o.d ${OBJECTDIR}/cubeper.o.d ${OBJECTDIR}/cubemain.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1110462562/i2c_master.o ${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o ${OBJECTDIR}/_ext/1110462562/oled_graphics.o ${OBJECTDIR}/_ext/1110462562/accel_spi.o ${OBJECTDIR}/usb/src/usb.o ${OBJECTDIR}/usb/src/usb_cdc.o ${OBJECTDIR}/cubecon.o ${OBJECTDIR}/cubeper.o ${OBJECTDIR}/cubemain.o ${OBJECTDIR}/usb/include/usb_descriptors.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1110462562/i2c_master.o.d ${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o.d ${OBJECTDIR}/_ext/1110462562/oled_graphics.o.d ${OBJECTDIR}/_ext/1110462562/accel_spi.o.d ${OBJECTDIR}/usb/src/usb.o.d ${OBJECTDIR}/usb/src/usb_cdc.o.d ${OBJECTDIR}/cubecon.o.d ${OBJECTDIR}/cubeper.o.d ${OBJECTDIR}/cubemain.o.d ${OBJECTDIR}/usb/include/usb_descriptors.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1110462562/i2c_master.o ${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o ${OBJECTDIR}/_ext/1110462562/oled_graphics.o ${OBJECTDIR}/_ext/1110462562/accel_spi.o ${OBJECTDIR}/cubecon.o ${OBJECTDIR}/cubeper.o ${OBJECTDIR}/cubemain.o
+OBJECTFILES=${OBJECTDIR}/_ext/1110462562/i2c_master.o ${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o ${OBJECTDIR}/_ext/1110462562/oled_graphics.o ${OBJECTDIR}/_ext/1110462562/accel_spi.o ${OBJECTDIR}/usb/src/usb.o ${OBJECTDIR}/usb/src/usb_cdc.o ${OBJECTDIR}/cubecon.o ${OBJECTDIR}/cubeper.o ${OBJECTDIR}/cubemain.o ${OBJECTDIR}/usb/include/usb_descriptors.o
 
 # Source Files
-SOURCEFILES=../JTlib/source/i2c_master.c ../JTlib/source/oled_control_i2c.c ../JTlib/source/oled_graphics.c ../JTlib/source/accel_spi.c cubecon.c cubeper.c cubemain.c
+SOURCEFILES=../JTlib/source/i2c_master.c ../JTlib/source/oled_control_i2c.c ../JTlib/source/oled_graphics.c ../JTlib/source/accel_spi.c usb/src/usb.c usb/src/usb_cdc.c cubecon.c cubeper.c cubemain.c usb/include/usb_descriptors.c
 
 
 CFLAGS=
@@ -98,86 +98,122 @@ ${OBJECTDIR}/_ext/1110462562/i2c_master.o: ../JTlib/source/i2c_master.c  nbproje
 	@${MKDIR} "${OBJECTDIR}/_ext/1110462562" 
 	@${RM} ${OBJECTDIR}/_ext/1110462562/i2c_master.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1110462562/i2c_master.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1110462562/i2c_master.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -MMD -MF "${OBJECTDIR}/_ext/1110462562/i2c_master.o.d" -o ${OBJECTDIR}/_ext/1110462562/i2c_master.o ../JTlib/source/i2c_master.c   
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1110462562/i2c_master.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -I"usb/include" -MMD -MF "${OBJECTDIR}/_ext/1110462562/i2c_master.o.d" -o ${OBJECTDIR}/_ext/1110462562/i2c_master.o ../JTlib/source/i2c_master.c   
 	
 ${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o: ../JTlib/source/oled_control_i2c.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1110462562" 
 	@${RM} ${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -MMD -MF "${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o.d" -o ${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o ../JTlib/source/oled_control_i2c.c   
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -I"usb/include" -MMD -MF "${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o.d" -o ${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o ../JTlib/source/oled_control_i2c.c   
 	
 ${OBJECTDIR}/_ext/1110462562/oled_graphics.o: ../JTlib/source/oled_graphics.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1110462562" 
 	@${RM} ${OBJECTDIR}/_ext/1110462562/oled_graphics.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1110462562/oled_graphics.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1110462562/oled_graphics.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -MMD -MF "${OBJECTDIR}/_ext/1110462562/oled_graphics.o.d" -o ${OBJECTDIR}/_ext/1110462562/oled_graphics.o ../JTlib/source/oled_graphics.c   
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1110462562/oled_graphics.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -I"usb/include" -MMD -MF "${OBJECTDIR}/_ext/1110462562/oled_graphics.o.d" -o ${OBJECTDIR}/_ext/1110462562/oled_graphics.o ../JTlib/source/oled_graphics.c   
 	
 ${OBJECTDIR}/_ext/1110462562/accel_spi.o: ../JTlib/source/accel_spi.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1110462562" 
 	@${RM} ${OBJECTDIR}/_ext/1110462562/accel_spi.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1110462562/accel_spi.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1110462562/accel_spi.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -MMD -MF "${OBJECTDIR}/_ext/1110462562/accel_spi.o.d" -o ${OBJECTDIR}/_ext/1110462562/accel_spi.o ../JTlib/source/accel_spi.c   
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1110462562/accel_spi.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -I"usb/include" -MMD -MF "${OBJECTDIR}/_ext/1110462562/accel_spi.o.d" -o ${OBJECTDIR}/_ext/1110462562/accel_spi.o ../JTlib/source/accel_spi.c   
+	
+${OBJECTDIR}/usb/src/usb.o: usb/src/usb.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/usb/src" 
+	@${RM} ${OBJECTDIR}/usb/src/usb.o.d 
+	@${RM} ${OBJECTDIR}/usb/src/usb.o 
+	@${FIXDEPS} "${OBJECTDIR}/usb/src/usb.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -I"usb/include" -MMD -MF "${OBJECTDIR}/usb/src/usb.o.d" -o ${OBJECTDIR}/usb/src/usb.o usb/src/usb.c   
+	
+${OBJECTDIR}/usb/src/usb_cdc.o: usb/src/usb_cdc.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/usb/src" 
+	@${RM} ${OBJECTDIR}/usb/src/usb_cdc.o.d 
+	@${RM} ${OBJECTDIR}/usb/src/usb_cdc.o 
+	@${FIXDEPS} "${OBJECTDIR}/usb/src/usb_cdc.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -I"usb/include" -MMD -MF "${OBJECTDIR}/usb/src/usb_cdc.o.d" -o ${OBJECTDIR}/usb/src/usb_cdc.o usb/src/usb_cdc.c   
 	
 ${OBJECTDIR}/cubecon.o: cubecon.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/cubecon.o.d 
 	@${RM} ${OBJECTDIR}/cubecon.o 
-	@${FIXDEPS} "${OBJECTDIR}/cubecon.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -MMD -MF "${OBJECTDIR}/cubecon.o.d" -o ${OBJECTDIR}/cubecon.o cubecon.c   
+	@${FIXDEPS} "${OBJECTDIR}/cubecon.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -I"usb/include" -MMD -MF "${OBJECTDIR}/cubecon.o.d" -o ${OBJECTDIR}/cubecon.o cubecon.c   
 	
 ${OBJECTDIR}/cubeper.o: cubeper.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/cubeper.o.d 
 	@${RM} ${OBJECTDIR}/cubeper.o 
-	@${FIXDEPS} "${OBJECTDIR}/cubeper.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -MMD -MF "${OBJECTDIR}/cubeper.o.d" -o ${OBJECTDIR}/cubeper.o cubeper.c   
+	@${FIXDEPS} "${OBJECTDIR}/cubeper.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -I"usb/include" -MMD -MF "${OBJECTDIR}/cubeper.o.d" -o ${OBJECTDIR}/cubeper.o cubeper.c   
 	
 ${OBJECTDIR}/cubemain.o: cubemain.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/cubemain.o.d 
 	@${RM} ${OBJECTDIR}/cubemain.o 
-	@${FIXDEPS} "${OBJECTDIR}/cubemain.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -MMD -MF "${OBJECTDIR}/cubemain.o.d" -o ${OBJECTDIR}/cubemain.o cubemain.c   
+	@${FIXDEPS} "${OBJECTDIR}/cubemain.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -I"usb/include" -MMD -MF "${OBJECTDIR}/cubemain.o.d" -o ${OBJECTDIR}/cubemain.o cubemain.c   
+	
+${OBJECTDIR}/usb/include/usb_descriptors.o: usb/include/usb_descriptors.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/usb/include" 
+	@${RM} ${OBJECTDIR}/usb/include/usb_descriptors.o.d 
+	@${RM} ${OBJECTDIR}/usb/include/usb_descriptors.o 
+	@${FIXDEPS} "${OBJECTDIR}/usb/include/usb_descriptors.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -I"usb/include" -MMD -MF "${OBJECTDIR}/usb/include/usb_descriptors.o.d" -o ${OBJECTDIR}/usb/include/usb_descriptors.o usb/include/usb_descriptors.c   
 	
 else
 ${OBJECTDIR}/_ext/1110462562/i2c_master.o: ../JTlib/source/i2c_master.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1110462562" 
 	@${RM} ${OBJECTDIR}/_ext/1110462562/i2c_master.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1110462562/i2c_master.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1110462562/i2c_master.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -MMD -MF "${OBJECTDIR}/_ext/1110462562/i2c_master.o.d" -o ${OBJECTDIR}/_ext/1110462562/i2c_master.o ../JTlib/source/i2c_master.c   
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1110462562/i2c_master.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -I"usb/include" -MMD -MF "${OBJECTDIR}/_ext/1110462562/i2c_master.o.d" -o ${OBJECTDIR}/_ext/1110462562/i2c_master.o ../JTlib/source/i2c_master.c   
 	
 ${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o: ../JTlib/source/oled_control_i2c.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1110462562" 
 	@${RM} ${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -MMD -MF "${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o.d" -o ${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o ../JTlib/source/oled_control_i2c.c   
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -I"usb/include" -MMD -MF "${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o.d" -o ${OBJECTDIR}/_ext/1110462562/oled_control_i2c.o ../JTlib/source/oled_control_i2c.c   
 	
 ${OBJECTDIR}/_ext/1110462562/oled_graphics.o: ../JTlib/source/oled_graphics.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1110462562" 
 	@${RM} ${OBJECTDIR}/_ext/1110462562/oled_graphics.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1110462562/oled_graphics.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1110462562/oled_graphics.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -MMD -MF "${OBJECTDIR}/_ext/1110462562/oled_graphics.o.d" -o ${OBJECTDIR}/_ext/1110462562/oled_graphics.o ../JTlib/source/oled_graphics.c   
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1110462562/oled_graphics.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -I"usb/include" -MMD -MF "${OBJECTDIR}/_ext/1110462562/oled_graphics.o.d" -o ${OBJECTDIR}/_ext/1110462562/oled_graphics.o ../JTlib/source/oled_graphics.c   
 	
 ${OBJECTDIR}/_ext/1110462562/accel_spi.o: ../JTlib/source/accel_spi.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1110462562" 
 	@${RM} ${OBJECTDIR}/_ext/1110462562/accel_spi.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1110462562/accel_spi.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1110462562/accel_spi.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -MMD -MF "${OBJECTDIR}/_ext/1110462562/accel_spi.o.d" -o ${OBJECTDIR}/_ext/1110462562/accel_spi.o ../JTlib/source/accel_spi.c   
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1110462562/accel_spi.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -I"usb/include" -MMD -MF "${OBJECTDIR}/_ext/1110462562/accel_spi.o.d" -o ${OBJECTDIR}/_ext/1110462562/accel_spi.o ../JTlib/source/accel_spi.c   
+	
+${OBJECTDIR}/usb/src/usb.o: usb/src/usb.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/usb/src" 
+	@${RM} ${OBJECTDIR}/usb/src/usb.o.d 
+	@${RM} ${OBJECTDIR}/usb/src/usb.o 
+	@${FIXDEPS} "${OBJECTDIR}/usb/src/usb.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -I"usb/include" -MMD -MF "${OBJECTDIR}/usb/src/usb.o.d" -o ${OBJECTDIR}/usb/src/usb.o usb/src/usb.c   
+	
+${OBJECTDIR}/usb/src/usb_cdc.o: usb/src/usb_cdc.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/usb/src" 
+	@${RM} ${OBJECTDIR}/usb/src/usb_cdc.o.d 
+	@${RM} ${OBJECTDIR}/usb/src/usb_cdc.o 
+	@${FIXDEPS} "${OBJECTDIR}/usb/src/usb_cdc.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -I"usb/include" -MMD -MF "${OBJECTDIR}/usb/src/usb_cdc.o.d" -o ${OBJECTDIR}/usb/src/usb_cdc.o usb/src/usb_cdc.c   
 	
 ${OBJECTDIR}/cubecon.o: cubecon.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/cubecon.o.d 
 	@${RM} ${OBJECTDIR}/cubecon.o 
-	@${FIXDEPS} "${OBJECTDIR}/cubecon.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -MMD -MF "${OBJECTDIR}/cubecon.o.d" -o ${OBJECTDIR}/cubecon.o cubecon.c   
+	@${FIXDEPS} "${OBJECTDIR}/cubecon.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -I"usb/include" -MMD -MF "${OBJECTDIR}/cubecon.o.d" -o ${OBJECTDIR}/cubecon.o cubecon.c   
 	
 ${OBJECTDIR}/cubeper.o: cubeper.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/cubeper.o.d 
 	@${RM} ${OBJECTDIR}/cubeper.o 
-	@${FIXDEPS} "${OBJECTDIR}/cubeper.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -MMD -MF "${OBJECTDIR}/cubeper.o.d" -o ${OBJECTDIR}/cubeper.o cubeper.c   
+	@${FIXDEPS} "${OBJECTDIR}/cubeper.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -I"usb/include" -MMD -MF "${OBJECTDIR}/cubeper.o.d" -o ${OBJECTDIR}/cubeper.o cubeper.c   
 	
 ${OBJECTDIR}/cubemain.o: cubemain.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/cubemain.o.d 
 	@${RM} ${OBJECTDIR}/cubemain.o 
-	@${FIXDEPS} "${OBJECTDIR}/cubemain.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -MMD -MF "${OBJECTDIR}/cubemain.o.d" -o ${OBJECTDIR}/cubemain.o cubemain.c   
+	@${FIXDEPS} "${OBJECTDIR}/cubemain.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -I"usb/include" -MMD -MF "${OBJECTDIR}/cubemain.o.d" -o ${OBJECTDIR}/cubemain.o cubemain.c   
+	
+${OBJECTDIR}/usb/include/usb_descriptors.o: usb/include/usb_descriptors.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/usb/include" 
+	@${RM} ${OBJECTDIR}/usb/include/usb_descriptors.o.d 
+	@${RM} ${OBJECTDIR}/usb/include/usb_descriptors.o 
+	@${FIXDEPS} "${OBJECTDIR}/usb/include/usb_descriptors.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../JTlib/headers" -I"../JTlib/source" -I"usb/include" -MMD -MF "${OBJECTDIR}/usb/include/usb_descriptors.o.d" -o ${OBJECTDIR}/usb/include/usb_descriptors.o usb/include/usb_descriptors.c   
 	
 endif
 
