@@ -1,0 +1,11 @@
+effects to try
+
+box boing
+noise pulse
+3x3 moving waterfall
+diag snake
+2x2 cubes sliding around
+wipe / transitions
+magic carpet
+sphere bouncing
+random slide
